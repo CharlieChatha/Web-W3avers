@@ -1,0 +1,131 @@
+:root {
+  --animation-duration: 0.5s;
+  --logo-color-1: #ff6b6b;
+  --logo-color-2: #4ecdc4;
+  --logo-color-3: #45b7d1;
+  --logo-color-4: #f7d794;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: 800;
+  margin: 0;
+  animation: fadeInDown var(--animation-duration) ease-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.logo span {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.logo span:nth-child(odd) {
+  color: var(--logo-color-1);
+  transform: skew(-5deg, -5deg) rotate(3deg);
+  text-shadow: 2px 2px 0 var(--logo-color-3);
+}
+
+.logo span:nth-child(even) {
+  color: var(--logo-color-2);
+  transform: skew(5deg, 5deg) rotate(-3deg);
+  text-shadow: -2px -2px 0 var(--logo-color-4);
+}
+
+nav{
+  background-color: rgb(48, 48, 48);
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li{
+  height: 50px;
+}
+
+nav a{
+  height: 100%;
+  display: flex;
+  padding: 0 30px;
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  font-weight: 600;
+}
+
+nav a:hover{
+  background-color: rgba(128, 128, 128, 0.26);
+  transition: 1.5s ease;
+  border-radius: 10px;
+}
+
+nav li:first-child{
+  margin-right: auto;
+  font-size: 20px;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.726);
+  backdrop-filter: blur(10%);
+  opacity: 1;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.048);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.sidebar li{  
+  width: 100%;
+}
+
+.sidebar a{
+  width: 100%;
+  font-weight: bold;
+}
+
+.menu-button{
+  display: none;
+}
+
+@media(max-width:800px){
+  .hideOnMobile{
+      display: none;
+  }
+  .menu-button{
+      display: block;
+  }
+}
+
+@media(max-width:400px){
+  .sidebar{
+      width: 100%;
+  }
+  .logo{
+    font-size: 1em;
+  }
+}
+
+
+
