@@ -7,6 +7,10 @@ close.addEventListener('click', hideSidebar);
 function showSidebar(){
      const sidebar = document.querySelector('.sidebar');
      sidebar.style.display = 'flex';
+     const links = sidebar.querySelectorAll('a'); // Assuming links are <a> elements
+     links.forEach(link => {
+         link.addEventListener('click', hideSidebar);
+     });
  }
 
 function hideSidebar(){
