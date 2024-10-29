@@ -313,6 +313,12 @@ main{
   }
 }
 
+@media(max-width:500px){
+  .logo{
+    font-size: 1em;
+  }
+}
+
 @media (max-width: 600px) {
   .about {
     padding: 10px;
